@@ -1,0 +1,153 @@
+/* sidans generella styling utanför burgaren*/
+
+/* rootfärg och övergångshastighet för främst headern och burgaren, funkar även i menu.css då den är länkad  till underst i html-koden */
+:root 
+  {
+    --primary-color: rgba(64, 69, 71, 0.75);
+    --overlay-color: rgba(15, 18, 20, 0.85);
+    --menu-speed: 0.75s;
+  }
+  
+  * 
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body 
+  {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    background-color: var(--overlay-color);
+  
+  }
+  
+  .container 
+  {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+  }
+  
+  /* styling av header-bilden före och efter klick på burgaren */
+  .showcase 
+  {
+    background: var(--primary-color);
+    color: #fff;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .showcase:before 
+  {
+    content: '';
+    background: url(showcase.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  /* header-img position */
+  .showcase .showcase-inner 
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  /* Text i header-img */
+  .showcase h1 
+  {
+    font-size: 4rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(20, 134, 91);
+  }
+  
+  .showcase p 
+  {
+    font-size: 1.9rem;
+  }
+  
+/* Här under kommer styling av allt innehåll under headern */
+.main
+{
+  display: flex;
+  border: solid 2px black;
+  flex-direction: column;
+  margin: 10vh;
+  padding: 10px;
+  background-color: rgba(64, 69, 71, 0.75);
+  color: white;
+  
+
+
+}
+
+footer
+{
+  overflow: auto;
+  position: fixed;
+  text-align: center;
+  background-color: var(--primary-color);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  -webkit-text-fill-color: white; 
+  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-color: rgb(68, 0, 255);
+
+  
+    
+}
+/* styling av social-media-knapparna */
+.fa 
+{
+  padding: 15px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.fa:hover 
+{
+  opacity: 0.7;
+}
+
+/* styling av huvudinnehållets rubriker/text */
+.content h1
+{
+  -webkit-text-fill-color: white; 
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: rgb(20, 134, 91);
+  font-size: 40px;
+  text-align: center;
+}
+
+.content p
+{
+  font-size: 20px;
+  padding: 15px;
+}
+
+.content .fa
+{
+  padding: 30px;
+  font-size: 40px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+}
+
+
+
